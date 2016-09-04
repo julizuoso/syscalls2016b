@@ -1,0 +1,11 @@
+#include <utime.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  const char *newfile = "example.txt";
+  FILE *example = fopen(newfile, "a");//crea un archivo si no existe
+  utime(newfile, NULL); //establece la fecha de modificación del archivo en la actual
+  printf("Hello, World!\n");
+    return 0;
+}
